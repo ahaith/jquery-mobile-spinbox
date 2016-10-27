@@ -176,6 +176,7 @@
 				});
 			} else {
 				w.d.up.on( w.g.eStart, function(e) {
+					e.stopPropagation();
 					w.d.input.blur();
 					w._offset( e.currentTarget, 1 );
 					w.g.move = true;
@@ -187,6 +188,7 @@
 					}
 				});
 				w.d.down.on(w.g.eStart, function(e) {
+					e.stopPropagation();
 					w.d.input.blur();
 					w._offset( e.currentTarget, -1 );
 					w.g.move = true;
